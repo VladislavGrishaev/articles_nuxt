@@ -1,5 +1,5 @@
 .pagination {
-  display: inline-flex;
+  display: flex;
   gap: 0 8px;
   
   &__list {
@@ -46,6 +46,22 @@
 
     &--prev-page {
       transform: rotate(-180deg);
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .pagination {
+    justify-content: center;
+
+     &__link {
+       padding: 14px 16px;
+     }
+
+    &__btn {
+      width: 36px;
+      height: 36px;
+      background-size: 17%;
     }
   }
 }

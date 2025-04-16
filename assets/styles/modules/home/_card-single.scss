@@ -51,3 +51,11 @@
     color: #e2beff;
   }
 }
+
+@media screen and (max-width: 767px){
+  .card-single {
+    &__wrap {
+      gap: 10px 0;
+    }
+  }
+}

@@ -15,4 +15,5 @@ export default defineNuxtConfig({
     storesDirs: ['./store/**'],
   },
   ssr: false,
+  devtools: { enabled: false }
 })

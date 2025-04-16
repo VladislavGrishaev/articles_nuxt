@@ -81,33 +81,125 @@
       font: 400 16px/8px "TTCommons-Regular", sans-serif;
       text-decoration: underline;
       text-underline-offset: 5px;
-      
+      white-space: nowrap;
+
       &:hover {
         color: #fff;
       }
 
+
     }
-    &--center {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      margin: 0 auto -30px auto;
-      padding: 0 0 25px 0;
-      background: #101010;
-      border-radius: 190px 190px 0 0;
-      clip-path: ellipse(100% 100% at 50% 14%);
-      width: 358px;
-      height: 179px;
+  }
+}
 
-      a {
-        font: 400 32px/1 "TTCommons-Regular", sans-serif;
-        color: #fff;
+@media screen and (min-width: 971px) {
+  .footer {
 
-        &:hover {
-          color: #e2beff;
+    &__item-link {
+
+      &--center {
+        width: 358px;
+        height: 179px;
+
+        a {
+          font-size: 32px;
         }
       }
     }
   }
 }
 
+@media screen and (min-width: 785px) and (max-width: 970px) {
+  .footer {
+    &__item-link {
+
+      &--center {
+        width: 260px;
+        height: 128px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 784px) {
+  .footer {
+    &__item-link {
+
+      &--center {
+        width: 180px;
+        height: 92px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__item-link {
+      &--center {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-shrink: 0;
+        margin: 0 auto -30px auto;
+        padding: 0 0 25px 0;
+        background: #101010;
+        border-radius: 190px 190px 0 0;
+        clip-path: ellipse(100% 100% at 50% 14%);
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .footer {
+    &__links-foot {
+      gap: 0 20px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 40px 0 10px 0;
+
+    &__title {
+      margin: 0 0 30px 0;
+    }
+
+    &__text-content {
+      p {
+        text-underline-offset: 3px;
+
+        font: 400 40px/1 "TTCommons-Regular", sans-serif;
+      }
+    }
+
+    &__contact {
+      gap: 20px 0;
+    }
+
+    &__detail-map {
+      width: 24px;
+      height: 24px;
+      background-size: 9px;
+    }
+
+    &__content {
+      flex-wrap: wrap;
+      gap: 20px 0;
+      margin: 0 0 30px 0;
+    }
+
+    &__links-foot {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+    }
+  }
+}

@@ -12,3 +12,23 @@
     margin: 0 0 36px 0;
   }
 }
+
+@media screen and (max-width: 580px){
+  .articles {
+
+    &__list {
+      gap: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  .articles {
+    padding: 40px 0;
+
+    &__title-page {
+      margin: 0 0 30px 0;
+    }
+  }
+}
