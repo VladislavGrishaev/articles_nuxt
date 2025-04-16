@@ -1,0 +1,113 @@
+.footer {
+  padding: 140px 0 0 0;
+  background-color: #e2beff;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 984px;
+    width: 100%;
+    margin: 0 0 143px 0;
+  }
+
+  &__text-content {
+    p {
+      display: inline;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      text-decoration-thickness: 1px;
+      text-decoration-skip-ink: auto;
+      font: 400 112px/1 "TTCommons-Regular", sans-serif;
+
+
+    }
+  }
+
+  &__title {
+    margin: 0 0 56px 0;
+  }
+
+
+  &__contact-with-us, &__location {
+    p {
+      margin: 0 0 12px 0;
+    }
+  }
+
+  &__contact-with-us {
+    a + a {
+      margin: 4px 0 0 0;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 36px 0;
+    max-width: 152px;
+  }
+
+  &__location {
+    address {
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &__detail-map {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #101010 url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010.4%2010.4%22%3E%3Cpath%20d%3D%22M7.5%2C10.5l3-9-9%2C3L5.25%2C6.75Z%22%20transform%3D%22translate(-0.8%20-0.8)%22%20style%3D%22fill%3Anone%3Bstroke%3A%23e2beff%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-width%3A1.399999976158142px%22%2F%3E%3C%2Fsvg%3E") no-repeat center;
+    background-size: 12px;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+  }
+
+  &__links-foot {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 30px 0;
+    gap: 0 32px;
+  }
+
+
+  &__item-link {
+    a {
+      font: 400 16px/8px "TTCommons-Regular", sans-serif;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      
+      &:hover {
+        color: #fff;
+      }
+
+    }
+    &--center {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 0 auto -30px auto;
+      padding: 0 0 25px 0;
+      background: #101010;
+      border-radius: 190px 190px 0 0;
+      clip-path: ellipse(100% 100% at 50% 14%);
+      width: 358px;
+      height: 179px;
+
+      a {
+        font: 400 32px/1 "TTCommons-Regular", sans-serif;
+        color: #fff;
+
+        &:hover {
+          color: #e2beff;
+        }
+      }
+    }
+  }
+}
+

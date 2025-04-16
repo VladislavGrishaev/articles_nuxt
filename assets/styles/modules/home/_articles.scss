@@ -1,0 +1,14 @@
+.articles {
+  padding: 120px 0 140px 0;
+
+  &__title-page {
+    margin: 0 0 59px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 36px 32px;
+    margin: 0 0 36px 0;
+  }
+}

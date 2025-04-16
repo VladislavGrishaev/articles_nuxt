@@ -1,0 +1,125 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding: 35px 0;
+  background-color: #fff;
+  z-index: 100;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__nav {
+    margin: 0 91px 0 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 0 58px;
+  }
+
+  &__logo {
+    margin: 0 auto 0 0;
+
+    img {
+      width: 84px;
+      height: 25px;
+    }
+  }
+
+  &__item {
+    a {
+      font: 400 20px/1 "TTCommons-Regular", sans-serif;
+
+      &:hover {
+        text-decoration: underline;
+        color: #e2beff;
+      }
+    }
+  }
+
+  &__btns-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+  }
+
+  &__checkout-langs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 999px;
+
+    &:hover {
+      border-color: #e2beff;
+    }
+  }
+
+  &__login {
+    padding: 14px 30px;
+    border-radius: 999px;
+    transition: 0.3s;
+    background-color: #101010;
+    border: 2px solid #101010;
+    font: 400 20px/1 "TTCommons-Regular", sans-serif;
+    color: #fff;
+
+    &:hover {
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      color: #101010;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 15px 0;
+
+    &__nav {
+      margin: 0 10px 0 0;
+    }
+
+    &__list {
+      gap: 0 15px;
+    }
+
+    &__logo {
+
+      img {
+        width: 44px;
+        height: 25px;
+      }
+    }
+
+    &__checkout-langs {
+      width: 15px;
+      height: 15px;
+    }
+
+    &__item {
+      a {
+        font: 400 16px/1 "TTCommons-Regular", sans-serif;
+
+      }
+    }
+
+    &__login {
+      white-space: nowrap;
+      padding: 5px 15px;
+      font: 400 16px/1 "TTCommons-Regular", sans-serif;
+    }
+
+    &__btns-wrap {
+      gap: 0 8px;
+    }
+  }
+
+}

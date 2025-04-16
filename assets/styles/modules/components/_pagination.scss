@@ -1,0 +1,51 @@
+.pagination {
+  display: inline-flex;
+  gap: 0 8px;
+  
+  &__list {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 8px;
+  }
+
+  &__item {
+    &--active {
+      .pagination__link {
+        background-color: #101010;
+        color: #fff;
+      }
+    }
+  }
+
+  &__link {
+    padding: 18px 20px;
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    transition: 0.3s;
+    font: 400 16px/8px "TTCommons-Regular", sans-serif;
+    color: #101010;
+
+    &:hover {
+      background-color: #e8e8e8;
+      color: #101010;
+    }
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    transition: 0.3s;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    background: #fff url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%206.3%2011.3%22%3E%3Cpath%20d%3D%22M1.5%2C1.5l5%2C5-5%2C5%22%20transform%3D%22translate(-0.85%20-0.85)%22%20style%3D%22fill%3Anone%3Bstroke%3A%23494949%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-width%3A1.2999999523162842px%22%2F%3E%3C%2Fsvg%3E") no-repeat center;
+    background-size: 8px 13px;
+    
+    &:hover {
+      background-color: #e8e8e8;
+    }
+
+    &--prev-page {
+      transform: rotate(-180deg);
+    }
+  }
+}
