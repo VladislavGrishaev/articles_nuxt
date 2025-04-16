@@ -188,6 +188,7 @@
       width: 24px;
       height: 24px;
       background-size: 9px;
+      background-position-x: 7px;
     }
 
     &__content {
@@ -198,6 +199,7 @@
 
     &__links-foot {
       flex-wrap: wrap;
+      justify-content: space-between;
       gap: 10px;
       padding: 0;
     }

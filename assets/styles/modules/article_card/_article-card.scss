@@ -1,0 +1,51 @@
+.article-card {
+  padding: 120px 0 80px 0;
+
+  &__title-page {
+    margin: 0 0 73px 0;
+  }
+  
+  &__img-wrap {
+    margin: 0 0 80px 0;
+    aspect-ratio: 16 / 9.2;
+    background-color: #ccc;
+  }
+
+  &__content {
+    max-width: 695px;
+  }
+
+  &__caption {
+    margin: 0 0 32px 0;
+  }
+
+  &__description-post {
+    p {
+      font: 400 36px/45px "TTCommons-Regular", sans-serif;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article-card {
+    padding: 40px 0;
+
+    &__img-wrap {
+      margin: 0 0 20px 0;
+    }
+
+    &__caption {
+      margin: 0 0 10px 0;
+    }
+
+    &__title-page {
+      margin: 0 0 30px 0;
+    }
+
+    &__description-post {
+      p {
+        font: 400 24px/1 "TTCommons-Regular", sans-serif;
+      }
+    }
+  }
+}

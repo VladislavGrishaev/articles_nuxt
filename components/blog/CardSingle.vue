@@ -7,7 +7,7 @@
 				 to="/"
 				 class="card-single">
 		 <div class="card-single__wrap">
-				 <div class="card-single__img">
+				 <div class="card-single__img-wrap">
 						 <img src="" alt="article">
 				 </div>
 				 <div class="card-single__content">
