@@ -6,6 +6,7 @@ import Pagination from '../components/Pagination.vue'
 import '../assets/styles/home.scss'
 
 const articlesStore = useArticlesStore()
+const paginatedPosts = computed(() => articlesStore.paginationPosts)
 
 onMounted(() => {
   articlesStore.fetchBlogPosts()
@@ -26,13 +27,15 @@ onMounted(() => {
 								</div>
 								<div class="articles__list">
 										<CardSingle
-														v-for="post in articlesStore.blogPosts"
+														v-for="post in paginatedPosts"
 														:key="post.id"
 														:post="post"
 										/>
 								</div>
 
-								<Pagination/>
+								<Pagination
+
+								/>
 						</div>
 				</div>
 		</section>

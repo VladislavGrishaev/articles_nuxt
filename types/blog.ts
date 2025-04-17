@@ -3,8 +3,6 @@ export interface BlogPost {
   createdAt: string;
   preview: string;
   title: string;
-  // image: string;
+  image: string;
   description: string;
 }
-
-export type BlogPosts = BlogPost[];
