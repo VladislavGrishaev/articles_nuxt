@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.11.0",
+    "@nuxt/scripts": "^0.11.5",
     "nuxt": "^3.16.2",
     "pinia": "^3.0.2",
+    "typescript": "^5.8.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@nuxt/typescript": "^2.8.1",
+    "@types/node": "^22.13.13",
     "sass": "^1.86.3"
   }
 }
