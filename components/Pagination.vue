@@ -19,7 +19,7 @@ const nextPage = () => {
 <template>
 		<div class="pagination">
 				<button
-								v-if="articlesStore.pagination.currentPage > 5"
+								v-show="articlesStore.pagination.currentPage > 5"
 								@click="prevPage"
 								:disabled="articlesStore.pagination.currentPage <= 1"
 								class="pagination__btn pagination__btn--prev-page"
@@ -29,20 +29,18 @@ const nextPage = () => {
 						<li
 										v-for="page in articlesStore.pagination.visiblePages"
 										:key="page"
-										:class="[
-      'pagination__item',
-      { 'pagination__item--active': page === articlesStore.pagination.currentPage }
-    ]"
+										:class="[ 'pagination__item',
+										{ 'pagination__item--active': page === articlesStore.pagination.currentPage }]"
 						>
-								<a @click.prevent="articlesStore.changePage(page)" href="#" class="pagination__link">
+								<span @click="articlesStore.changePage(page)" class="pagination__link">
 										{{ page }}
-								</a>
+								</span>
 						</li>
 				</ul>
 
 
 				<button
-								v-if="articlesStore.pagination.currentPage < articlesStore.totalPages"
+								v-show="articlesStore.pagination.currentPage < articlesStore.totalPages"
 								@click="nextPage"
 								:disabled="articlesStore.pagination.currentPage >= articlesStore.totalPages"
 								class="pagination__btn pagination__btn--next-page"
