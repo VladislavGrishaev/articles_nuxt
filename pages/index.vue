@@ -5,10 +5,10 @@ import Pagination from '../components/Pagination.vue'
 
 import '../assets/styles/home.scss'
 
-const store = useArticlesStore()
+const articlesStore = useArticlesStore()
 
 onMounted(() => {
-  store.fetchBlogPosts()
+  articlesStore.fetchBlogPosts()
 })
 
 </script>
@@ -17,8 +17,8 @@ onMounted(() => {
 
 		<section class="articles">
 				<div class="container">
-						<div v-if="store.isLoading">Загрузка...</div>
-						<div v-else-if="store.error">Ошибка: {{ store.error }}</div>
+						<div v-if="articlesStore.isLoading">Загрузка...</div>
+						<div v-else-if="articlesStore.error">Ошибка загрузки данных</div>
 
 						<div v-else class="articles__wrap">
 								<div class="articles__title-page">
@@ -26,7 +26,7 @@ onMounted(() => {
 								</div>
 								<div class="articles__list">
 										<CardSingle
-														v-for="post in store.blogPosts"
+														v-for="post in articlesStore.blogPosts"
 														:key="post.id"
 														:post="post"
 										/>

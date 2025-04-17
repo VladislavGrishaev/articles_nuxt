@@ -16,11 +16,20 @@ export const usePostStore = defineStore('post', {
 
       try {
         const response = await fetch(`https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work/posts/${id}`)
+
+        if (!response.ok) {
+          throw new Error(`Ошибка сервера: ${response.status}`)
+        }
+
+
         this.post = await response.json()
-      } catch (e: any) {
+      }
+      catch (e: any) {
         this.error = e.message || 'Ошибка при загрузке поста'
+        this.post = null
         console.error(e)
-      } finally {
+      }
+      finally {
         this.isLoading = false
       }
     }

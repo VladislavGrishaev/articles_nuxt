@@ -10,7 +10,7 @@ defineProps<{
 		<NuxtLink :to="`/blog/${post.id}`" class="card-single">
 				<div class="card-single__wrap">
 						<div class="card-single__img-wrap">
-								<img :src="post.image" alt="article" />
+								<img src="" alt="article" />
 						</div>
 						<div class="card-single__content">
 								<div class="card-single__preview-description">

@@ -13,10 +13,16 @@ export const useArticlesStore = defineStore('articles', {
       this.isLoading = true
       try {
         const response = await fetch('https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work/posts/')
+
+        if (!response.ok) {
+          throw new Error(`Ошибка сервера: ${response.status}`)
+        }
+
         this.blogPosts = await response.json()
       }
       catch (e: any) {
         this.error = e.message || 'Ошибка при загрузке данных постов'
+        this.blogPosts = []
         console.log(e.message)
       }
       finally {
