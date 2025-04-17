@@ -19,6 +19,7 @@ const nextPage = () => {
 <template>
 		<div class="pagination">
 				<button
+								v-if="articlesStore.pagination.currentPage > 5"
 								@click="prevPage"
 								:disabled="articlesStore.pagination.currentPage <= 1"
 								class="pagination__btn pagination__btn--prev-page"
@@ -41,6 +42,7 @@ const nextPage = () => {
 
 
 				<button
+								v-if="articlesStore.pagination.currentPage < articlesStore.totalPages"
 								@click="nextPage"
 								:disabled="articlesStore.pagination.currentPage >= articlesStore.totalPages"
 								class="pagination__btn pagination__btn--next-page"
